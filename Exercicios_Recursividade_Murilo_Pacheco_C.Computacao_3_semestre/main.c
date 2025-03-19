@@ -12,7 +12,7 @@ int somaEntreNumerosNaturais(int num)
 {
 
     if (num < 1)return 0;
-    return num + somaEntreNumeros(num - 1);
+    return num + somaEntreNumerosNaturais(num - 1);
 }
 
 int fibonacci(int n) {
@@ -39,8 +39,8 @@ int potenciacao(int x, int y)
 int contagemRegressiva(int n, int y){
 
         printf("%d\n", y);
-        if (n>y){
-            return imprimenumeros(n, y+1);
+        if (n < y){
+            return contagemRegressiva(n, y-1);
         }
         else {
             return 0 ;
