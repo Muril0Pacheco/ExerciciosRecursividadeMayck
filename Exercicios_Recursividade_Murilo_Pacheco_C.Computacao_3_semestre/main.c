@@ -10,7 +10,6 @@ int fatorial(int n)
 
 int somaEntreNumerosNaturais(int num)
 {
-
     if (num < 1)return 0;
     return num + somaEntreNumerosNaturais(num - 1);
 }
@@ -36,19 +35,14 @@ int potenciacao(int x, int y)
     return x * potenciacao(x, y - 1);
 }
 
-int contagemRegressiva(int n, int y){
-
-        printf("%d\n", y);
-        if (n < y){
-            return contagemRegressiva(n, y-1);
-        }
-        else {
-            return 0 ;
-        }
+void contagemRegressiva(int y) {
+    printf("%d\n", y);
+    if (y > 0) {
+        contagemRegressiva(y - 1);
     }
+}
 
 int soma_digitos(int n) {
-    int soma_digitos(int n) {
     if (n == 0) {
         return 0;
     }
@@ -68,13 +62,18 @@ void inverter_string(char str[], int inicio, int fim) {
     inverter_string(str, inicio + 1, fim - 1);
 }
 
-    if (n == 0) {
-        return 0;
-    }
-
-    return (n % 10) + soma_digitos(n / 10);
-}
-
 int main() {
-  //Chame as funções aqui
+     printf("Fatorial de 5: %d\n", fatorial(5));
+    printf("Soma dos primeiros 4 números naturais: %d\n", somaEntreNumerosNaturais(4));
+    printf("Fibonacci de 6: %d\n", fibonacci(6));
+    printf("2 elevado a 5: %d\n", potenciacao(2, 5));
+    printf("Contagem regressiva de 3:\n");
+    contagemRegressiva(3);
+    printf("Soma dos dígitos de 1234: %d\n", soma_digitos(1234));
+
+    char str[] = "recursao";
+    inverter_string(str, 0, 7);
+    printf("String invertida: %s\n", str);
+
+    return 0;
 }
