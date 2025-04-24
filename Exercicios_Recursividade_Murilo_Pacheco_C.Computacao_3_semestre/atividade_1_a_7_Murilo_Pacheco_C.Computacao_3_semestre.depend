@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1745515463 source:d:\dev\c\exerciciosrecursividademayck\exercicios_recursividade_murilo_pacheco_c.computacao_3_semestre\main.c
+	<stdio.h>
+	<stdlib.h>
+
